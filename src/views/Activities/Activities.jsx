@@ -7,13 +7,13 @@ const Activities = () => {
   const activities = useSelector((state) => state.activities);
   const dispatch = useDispatch();
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this activity?")) {
-      dispatch(deleteActivity(id));
+      await dispatch(deleteActivity(id));
       window.location.reload();
     }
   };
-
+  
   return (
     <div>
       <ActivitiesBody activities={activities} handleDelete={handleDelete} />
