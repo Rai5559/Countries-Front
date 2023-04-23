@@ -13,7 +13,7 @@ const Activities = () => {
       window.location.reload();
     }
   };
-  
+
   return (
     <div>
       <ActivitiesBody activities={activities} handleDelete={handleDelete} />
