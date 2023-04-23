@@ -11,6 +11,7 @@ const Activities = () => {
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this activity?")) {
       dispatch(deleteActivity(id));
+      window.location.reload();
     }
   };
 
